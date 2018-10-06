@@ -1,0 +1,20 @@
+D        OK
+A        OK
+B        ERRO - D
+B        OK
+D        ERRO - A
+B        OK
+B        ERRO - C
+A        OK
+D-C      OK
+B        OK
+A        OK
+C        OK
+B        OK
+A        OK
+B        OK
+C        ERRO - B
+C        OK
+C        OK
+B        OK
+C        OK
