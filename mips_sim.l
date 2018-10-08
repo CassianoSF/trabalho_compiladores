@@ -13,7 +13,7 @@ digit       [0-9]
 
 id          {letter}({letter}|{digit})*
 int_num     [+-]?[0-9]+
-str         ["/*"(.|\\\n)*"*/"]
+str         \"(([^""])|(\\\"))*\"   
 comment     "#".* 
 
 %%
@@ -261,17 +261,9 @@ void hundleMflo(){
     printf("mflo - ");
     tok = yylex();
     if(tok == T_REG){
-        
-        tok = yylex();
-        if(tok == T_COMMA){
 
-            tok = yylex();
-            if(tok == T_REG){
-
-                printf("SUCCESS\n");
-                return;
-            }
-        }
+        printf("SUCCESS\n");
+        return;
     }
     printf("ERROR!\n");
 }

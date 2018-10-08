@@ -1,5 +1,5 @@
 		.data
-print:  	.asciiz "Valor da Soma: "
+print:  	.asciiz "Valor da Soma:"
 		.text
 
 main:
