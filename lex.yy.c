@@ -2435,9 +2435,22 @@ void handleStoreWord()
         if(tok == T_COMMA){
 
             tok = yylex();
-            if(tok == T_ID){
-                printf("SUCCESS\n");
-                return;
+            if(tok == T_INT_NUM){
+
+                tok = yylex();
+                if(tok == T_LB){
+
+                    tok = yylex();
+                    if(tok == T_REG){
+
+                        tok = yylex();
+                        if(tok == T_RB){
+                            
+                            printf("SUCCESS\n");
+                            return;
+                        }
+                    }
+                }
             }
         }
     }
